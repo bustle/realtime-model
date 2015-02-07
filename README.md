@@ -16,7 +16,7 @@ In your Gemfile:
 Defining a model:
 
     class Race
-    	include RealtimeModel
+      include RealtimeModel
       rt_attr   :name,  as: String
       rt_attr   :laps,  as: Integer
       has_many  :cars', as: Car # Car must include RealtimeModel
@@ -43,9 +43,11 @@ Defining a model:
 ## Finding
 
 Find by id
+
     car = Car.find(1)
 
 Find using indexed attributes
+
     ferrari_driver = Driver.find(team: 'Ferrari')
     sauber_drivers = Driver.find_all(team: 'Sauber')
 
